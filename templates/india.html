@@ -1,0 +1,60 @@
+{% extends "original.html" %}
+
+{% block content %}
+<br>
+<br>
+<div class="card card-inverse card-primary mb-3 text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <h3>{{ nse['companyName'] }}</h3>
+      
+
+      <h4>NSE - {{ nse['lastPrice'] }}</h4>
+      
+      <p>Open price - {{ nse['open'] }}</p>
+      <p> 52 week high/Low - {{ nse['high52'] }} / {{ nse['low52'] }}</p>
+      
+
+      <footer>CODE <cite title="Source Title">{{ nse['symbol'] }}</cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+ <div class="row">
+        <div class="col-md-3">
+            <div class = "table-responsive">
+               <table class = "table table-hover" border ="1">
+                <tbody>
+                      <tr>
+                          <th colspan="3"> Fundementals </th></th>
+                      </tr>
+                     <tr>
+                        <td>Volume traded</td>
+                        <td>{{ nse['totalTradedVolume'] }}</td>
+                     </tr>
+                     
+                     <tr>
+                        <td>Face Value</td>
+                        <td>{{ nse['faceValue'] }}</td>
+                     </tr>
+                     
+                     <tr>
+                        <td>Product3</td>
+                        <td>20/10/2013</td>
+                     </tr>
+                     
+                     <tr>
+                        <td>Product4</td>
+                        <td>20/10/2013</td>
+                     </tr>
+                  </tbody>
+                  
+               </table>
+            </div>
+        </div>
+        <div class="col-md-6">.col-md-4</div>
+        <div class="col-md-3">.col-md-4</div>
+</div>
+
+{% endblock %}
+

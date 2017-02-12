@@ -1,0 +1,21 @@
+{% extends "original.html" %}
+
+
+{% block content %}
+
+{% for i,j,k,l in news %}	
+	<div class="media">
+  		<div class="media-left media-middle">	  			    
+      		<img class="media-object" style = "max-width:100px; margin-top: -10px;" src= "{{ l }}" alt = "...">
+	    </div>
+  	<div class="media-body">
+  	<a href= "{{ k }}" target="_newtab">
+    	<h5 class="media-heading"> {{ j }}</h5>
+    </a>
+    	<text> {{ i }} </text>
+  	</div>
+</div>
+{% endfor %}
+
+{% endblock %}
+

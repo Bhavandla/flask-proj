@@ -1,0 +1,45 @@
+{% extends "original.html" %}
+
+
+{% block content%}
+
+<!--
+<br>
+<br>
+<div class="container">
+	<div class="media">
+	  <div class="media-left media-middle">
+	    <a href="#">
+	      <img class="media-object" style = "max-width:40px; margin-top: -10px;" src= "https://binarybiker.files.wordpress.com/2011/08/fox-news-logo-photos.jpg" alt = "...">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">We are Republican supporters</h4>
+	  </div>
+	</div>
+    <br>
+    <br>
+	<div class="media">
+	  <div class="media-left media-middle">
+	    <a href="#">
+	      <img class="media-object" style = "max-width:40px; margin-top: -10px;" src= "https://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png" alt = "...">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">We are Democratic supporters</h4>
+	  </div>
+	</div>
+    <br>
+    <br>
+	</div>
+</div>
+-->
+ <marquee behavior="scroll" direction="left" style="height:300px;">
+  <ul style="list-style: none;">
+  {% for key, value in tweets.iteritems() %}
+     <a href = "https://{{ value.decode('utf-8') }}"> {{ key.decode('utf-8') }} &nbsp &nbsp 
+  {% endfor %}
+  </ul>   
+</marquee>
+
+{% endblock %}
